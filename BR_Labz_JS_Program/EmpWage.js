@@ -42,7 +42,7 @@ switch (employee_Check)
 let Employee_Wage =Employee_Hours * Wage_Per_Hours;
 console.log("Employee: " + Employee_Wage);
 
-*/
+
 //UC-3
 const Part_Time = 1;
 const Full_Time =2;
@@ -68,3 +68,38 @@ let employee_Check =Math.floor(Math.random()*10) % 3;
 Employee_Hours = getWorkingHours(employee_Check);
 let Employee_Wage =Employee_Hours * Wage_Per_Hours;
 console.log("Employee: " + Employee_Wage);
+
+*/
+//UC-4
+const Part_Time = 1;
+const Full_Time =2;
+const Part_Time_Hours = 4;
+const Full_Time_Hours =8;
+const Wage_Per_Hours = 20;
+const Num_Of_Working_Days = 2;
+let Employee_Hours = 0;
+
+function getWorkingHours(employee_Check)
+{
+    switch(employee_Check)
+    {
+        case Part_Time:
+            return Part_Time;
+        case Full_Time:
+            return Full_Time; 
+        default:
+            return 0;     
+    }
+}
+for(let day = 0;
+    day < Num_Of_Working_Days;
+    day++)
+    {
+        let employee_Check =Math.floor(Math.random()*10) % 3;
+        Employee_Hours += getWorkingHours(employee_Check);
+
+    }
+    let Employee_Wage =Employee_Hours * Wage_Per_Hours;
+     console.log("Employee: " + Employee_Wage);
+
+    
