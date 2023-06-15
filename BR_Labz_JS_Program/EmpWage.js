@@ -16,7 +16,7 @@ else
     console.log("Employee is Present")
 
 }
-*/
+
 //UC-2
 const Part_Time = 1;
 const Full_time =2;
@@ -39,5 +39,32 @@ switch (employee_Check)
         Employee_Hours = 0;    
 
 }
+let Employee_Wage =Employee_Hours * Wage_Per_Hours;
+console.log("Employee: " + Employee_Wage);
+
+*/
+//UC-3
+const Part_Time = 1;
+const Full_Time =2;
+const Part_Time_Hours = 4;
+const Full_Time_Hours =8;
+const Wage_Per_Hours = 20;
+
+function getWorkingHours(employee_Check)
+{
+    switch(employee_Check)
+    {
+        case Part_Time:
+            return Part_Time;
+        case Full_Time:
+            return Full_Time; 
+        default:
+            return 0;     
+    }
+}
+let Employee_Hours = 0;
+
+let employee_Check =Math.floor(Math.random()*10) % 3;
+Employee_Hours = getWorkingHours(employee_Check);
 let Employee_Wage =Employee_Hours * Wage_Per_Hours;
 console.log("Employee: " + Employee_Wage);
