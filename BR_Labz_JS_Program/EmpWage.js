@@ -1,0 +1,1 @@
+console.log("Hello Welcome Employee Wage Program")
